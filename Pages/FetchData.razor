@@ -1,0 +1,45 @@
+﻿@page "/fetchdata"
+
+@using Data
+@using Models
+
+<PageTitle>Lista Ocupaciones</PageTitle>
+
+@if (ocupaciones == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Ocupacion Id</th>
+                <th>Fecha Registro</th>
+                <th>Descripcion</th>
+                <th>Salario</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var ocupacion in ocupaciones)
+            {
+                <tr>
+                    <td>@ocupacion.OcupacionId</td>
+                    <td>@ocupacion.FechaRegistro</td>
+                    <td>@ocupacion.Descripcion</td>
+                    <td>@ocupacion.Salario</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<Ocupacion> ocupaciones;
+
+    protected override async Task OnInitializedAsync()
+    {
+        Contexto context = new Contexto();
+        ocupaciones = context.ocupacions.ToList();
+    }
+}

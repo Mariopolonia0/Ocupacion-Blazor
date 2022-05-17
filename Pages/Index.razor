@@ -1,0 +1,36 @@
+﻿@page "/"
+@using Models
+@using Data
+
+<PageTitle>Registro Ocupacion</PageTitle>
+
+<EditForm Model="ocupacion">
+    <div class="card">
+        <div class="card-header">
+            <h3>Registro Ocupacion</h3>
+        </div>
+        <div class="card-header">
+            <h4>Descripcion</h4>
+            <input type="text" @bind=@ocupacion.Descripcion />
+        </div>
+        <div class="card-header">
+            <h4>Salario</h4>
+            <input type="number" @bind-value=@ocupacion.Salario />
+        </div>
+        <div class="card-header">
+            <button class="btn btn-primary" @onclick="Guardar">Guardar</button>
+        </div>
+    </div>
+</EditForm>
+
+@code {    
+    Ocupacion ocupacion = new Ocupacion();
+   
+    public void Guardar()
+    {
+        Contexto contexto = new Contexto();
+        contexto.ocupacions?.Add(ocupacion);
+        contexto.SaveChanges();
+        ocupacion = new Ocupacion();
+    }
+}
