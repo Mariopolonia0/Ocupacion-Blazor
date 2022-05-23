@@ -54,3 +54,9 @@ C:\Users\Mario\source\projectoOcupacion\obj\Debug\net6.0\ref\projectoOcupacion.d
 C:\Users\Mario\source\projectoOcupacion\obj\Debug\net6.0\projectoOcupacion.pdb
 C:\Users\Mario\source\projectoOcupacion\obj\Debug\net6.0\projectoOcupacion.genruntimeconfig.cache
 C:\Users\Mario\source\projectoOcupacion\bin\Debug\net6.0\DataBase\Ocupacion.db
+C:\Users\Mario\source\projectoOcupacion\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Mario\source\projectoOcupacion\bin\Debug\net6.0\Syncfusion.Blazor.dll
+C:\Users\Mario\source\projectoOcupacion\bin\Debug\net6.0\Syncfusion.ExcelExport.Net.dll
+C:\Users\Mario\source\projectoOcupacion\bin\Debug\net6.0\Syncfusion.Licensing.dll
+C:\Users\Mario\source\projectoOcupacion\bin\Debug\net6.0\Syncfusion.PdfExport.Net.dll
+C:\Users\Mario\source\projectoOcupacion\bin\Debug\net6.0\Blazored.Toast.dll

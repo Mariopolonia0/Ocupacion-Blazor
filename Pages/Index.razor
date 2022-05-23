@@ -2,6 +2,8 @@
 @using Models
 @using Data
 
+@inject IToastService toastService
+
 <PageTitle>Registro Ocupacion</PageTitle>
 
 <EditForm Model="ocupacion">
@@ -23,14 +25,27 @@
     </div>
 </EditForm>
 
+
+
 @code {    
     Ocupacion ocupacion = new Ocupacion();
    
     public void Guardar()
     {
+        if(ocupacion.Descripcion.Length == 0){
+            toastService.ShowError("El campo descripcion esta vacio");
+            return;
+        }
+
+        if(ocupacion.Salario == 0){
+            toastService.ShowError("El campo descripcion esta vacio");
+            return;
+        }
+            
         Contexto contexto = new Contexto();
         contexto.ocupacions?.Add(ocupacion);
         contexto.SaveChanges();
         ocupacion = new Ocupacion();
+        toastService.ShowSuccess("Guardado");
     }
 }
