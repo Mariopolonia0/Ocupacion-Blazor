@@ -14,6 +14,7 @@ dotnet add package Microsoft.EntityFrameworkCore.tools
 
 -------------
 --PARA CONECTAR LA BASE DE DATOS
+
 dotnet tool install --global dotnet-ef 
 dotnet ef migrations add Inicial    
 dotnet ef update-database    
