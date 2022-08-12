@@ -5,7 +5,7 @@ namespace projectoOcupacion.Data
 {
     public class Contexto : DbContext
     {
-        public DbSet<Ocupacion>? ocupacions {set; get;}
+        public DbSet<Ocupacion>? ocupaciones {set; get;}
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder){
             builder.UseSqlite(@"data source= DataBase\Ocupacion.db");

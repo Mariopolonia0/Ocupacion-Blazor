@@ -15,8 +15,8 @@ else
         <thead>
             <tr>
                 <th>Ocupacion Id</th>
-                <th>Fecha Registro</th>
                 <th>Descripcion</th>
+                <th>Fecha Registro</th>
                 <th>Salario</th>
             </tr>
         </thead>
@@ -25,8 +25,8 @@ else
             {
                 <tr>
                     <td>@ocupacion.OcupacionId</td>
-                    <td>@ocupacion.FechaRegistro</td>
                     <td>@ocupacion.Descripcion</td>
+                    <td>@ocupacion.FechaRegistro</td>
                     <td>@ocupacion.Salario</td>
                 </tr>
             }
@@ -40,6 +40,6 @@ else
     protected override async Task OnInitializedAsync()
     {
         Contexto context = new Contexto();
-        ocupaciones = context.ocupacions.ToList();
+        ocupaciones = context.ocupaciones.ToList();
     }
 }

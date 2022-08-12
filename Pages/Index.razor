@@ -14,6 +14,9 @@
         <div class="card-header">
             <h4>Descripcion</h4>
             <input type="text" @bind=@ocupacion.Descripcion />
+            <button @onclick="Buscar"class="col align-self-start-center  btn btn-primary" >
+                <i class="oi oi-magnifying-glass" />
+            </button>
         </div>
         <div class="card-header">
             <h4>Salario</h4>
@@ -23,29 +26,41 @@
             <button class="btn btn-primary" @onclick="Guardar">Guardar</button>
         </div>
     </div>
+    <BlazoredToasts />
 </EditForm>
 
-
-
-@code {    
+@code {
     Ocupacion ocupacion = new Ocupacion();
-   
+    Contexto contexto = new Contexto();
+
     public void Guardar()
     {
-        if(ocupacion.Descripcion.Length == 0){
-            toastService.ShowError("El campo descripcion esta vacio");
+        if (ocupacion.Descripcion.Length == 0)
+        {
+            toastService.ShowError("El campo Descripcion esta vacio");
             return;
         }
 
-        if(ocupacion.Salario == 0){
-            toastService.ShowError("El campo descripcion esta vacio");
+        if (ocupacion.Salario == 0)
+        {
+            toastService.ShowError("El campo Salario esta vacio");
             return;
         }
-            
-        Contexto contexto = new Contexto();
-        contexto.ocupacions?.Add(ocupacion);
+
+        
+        contexto.ocupaciones?.Add(ocupacion);
         contexto.SaveChanges();
         ocupacion = new Ocupacion();
-        toastService.ShowSuccess("Guardado");
+        toastService.ShowSuccess("Registro Guardado");
+    }
+    public void Buscar()
+    {
+        try{
+            ocupacion = contexto.ocupaciones.Where(o => o.Descripcion == ocupacion.Descripcion).Single();
+            toastService.ShowInfo("Encotrado");
+        }catch(Exception exe){
+            toastService.ShowError("no se encotro");
+        }
+       
     }
 }

@@ -5,7 +5,6 @@ C:\Users\Mario\source\projectoOcupacion\bin\Debug\net6.0\projectoOcupacion.exe
 C:\Users\Mario\source\projectoOcupacion\bin\Debug\net6.0\projectoOcupacion.deps.json
 C:\Users\Mario\source\projectoOcupacion\bin\Debug\net6.0\projectoOcupacion.runtimeconfig.json
 C:\Users\Mario\source\projectoOcupacion\bin\Debug\net6.0\projectoOcupacion.dll
-C:\Users\Mario\source\projectoOcupacion\bin\Debug\net6.0\ref\projectoOcupacion.dll
 C:\Users\Mario\source\projectoOcupacion\bin\Debug\net6.0\projectoOcupacion.pdb
 C:\Users\Mario\source\projectoOcupacion\bin\Debug\net6.0\Humanizer.dll
 C:\Users\Mario\source\projectoOcupacion\bin\Debug\net6.0\Microsoft.Data.Sqlite.dll
@@ -53,10 +52,6 @@ C:\Users\Mario\source\projectoOcupacion\obj\Debug\net6.0\projectoOcupacion.dll
 C:\Users\Mario\source\projectoOcupacion\obj\Debug\net6.0\ref\projectoOcupacion.dll
 C:\Users\Mario\source\projectoOcupacion\obj\Debug\net6.0\projectoOcupacion.pdb
 C:\Users\Mario\source\projectoOcupacion\obj\Debug\net6.0\projectoOcupacion.genruntimeconfig.cache
-C:\Users\Mario\source\projectoOcupacion\bin\Debug\net6.0\DataBase\Ocupacion.db
-C:\Users\Mario\source\projectoOcupacion\bin\Debug\net6.0\Newtonsoft.Json.dll
-C:\Users\Mario\source\projectoOcupacion\bin\Debug\net6.0\Syncfusion.Blazor.dll
-C:\Users\Mario\source\projectoOcupacion\bin\Debug\net6.0\Syncfusion.ExcelExport.Net.dll
-C:\Users\Mario\source\projectoOcupacion\bin\Debug\net6.0\Syncfusion.Licensing.dll
-C:\Users\Mario\source\projectoOcupacion\bin\Debug\net6.0\Syncfusion.PdfExport.Net.dll
 C:\Users\Mario\source\projectoOcupacion\bin\Debug\net6.0\Blazored.Toast.dll
+C:\Users\Mario\source\projectoOcupacion\obj\Debug\net6.0\refint\projectoOcupacion.dll
+C:\Users\Mario\source\projectoOcupacion\bin\Debug\net6.0\DataBase\Ocupacion.db

@@ -13,14 +13,9 @@ C:\Users\Mario\source\projectoOcupacion\bin\Release\net6.0\publish\Microsoft.Ent
 C:\Users\Mario\source\projectoOcupacion\bin\Release\net6.0\publish\Microsoft.EntityFrameworkCore.Sqlite.dll
 C:\Users\Mario\source\projectoOcupacion\bin\Release\net6.0\publish\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\Mario\source\projectoOcupacion\bin\Release\net6.0\publish\Microsoft.Extensions.DependencyModel.dll
-C:\Users\Mario\source\projectoOcupacion\bin\Release\net6.0\publish\Newtonsoft.Json.dll
 C:\Users\Mario\source\projectoOcupacion\bin\Release\net6.0\publish\SQLitePCLRaw.batteries_v2.dll
 C:\Users\Mario\source\projectoOcupacion\bin\Release\net6.0\publish\SQLitePCLRaw.core.dll
 C:\Users\Mario\source\projectoOcupacion\bin\Release\net6.0\publish\SQLitePCLRaw.provider.e_sqlite3.dll
-C:\Users\Mario\source\projectoOcupacion\bin\Release\net6.0\publish\Syncfusion.Blazor.dll
-C:\Users\Mario\source\projectoOcupacion\bin\Release\net6.0\publish\Syncfusion.ExcelExport.Net.dll
-C:\Users\Mario\source\projectoOcupacion\bin\Release\net6.0\publish\Syncfusion.Licensing.dll
-C:\Users\Mario\source\projectoOcupacion\bin\Release\net6.0\publish\Syncfusion.PdfExport.Net.dll
 C:\Users\Mario\source\projectoOcupacion\bin\Release\net6.0\publish\runtimes\alpine-x64\native\libe_sqlite3.so
 C:\Users\Mario\source\projectoOcupacion\bin\Release\net6.0\publish\runtimes\linux-arm\native\libe_sqlite3.so
 C:\Users\Mario\source\projectoOcupacion\bin\Release\net6.0\publish\runtimes\linux-arm64\native\libe_sqlite3.so

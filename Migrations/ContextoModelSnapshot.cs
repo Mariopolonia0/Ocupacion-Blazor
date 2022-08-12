@@ -35,7 +35,7 @@ namespace projectoOcupacion.Migrations
 
                     b.HasKey("OcupacionId");
 
-                    b.ToTable("ocupacions");
+                    b.ToTable("ocupaciones");
                 });
 #pragma warning restore 612, 618
         }
