@@ -1,4 +1,5 @@
-# registro Ocupacion Blazor
+# Sistema de ocupacion en Blazor
+
 
 ## COMANDO PARA VISUAL STUDIO CODE Y BLAZOR:
 
