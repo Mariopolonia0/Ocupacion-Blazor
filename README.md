@@ -1,4 +1,4 @@
-# Sistema de ocupacion en Blazor
+# Pagina web de ocupacion en Blazor
 ~~~ 
 pagina de registro de ocupacion
 ~~~
