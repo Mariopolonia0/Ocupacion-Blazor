@@ -3,7 +3,13 @@
 @using Data
 @using Models
 
+@inject IToastService toastService
+
 <PageTitle>Lista Ocupaciones</PageTitle>
+<div class="card-header">
+    <input @bind="@salario" />
+    <button class="btn btn-primary" @onclick="Buscar">Buscar Salario</button>
+</div>
 
 @if (ocupaciones == null)
 {
@@ -26,16 +32,46 @@ else
                 <tr>
                     <td>@ocupacion.OcupacionId</td>
                     <td>@ocupacion.Descripcion</td>
-                    <td>@ocupacion.FechaRegistro</td>
-                    <td>@ocupacion.Salario</td>
+                    <td>@ocupacion.FechaRegistro.ToString("dddd dd / MM / yy")</td>
+                    <td>@ocupacion.Salario.ToString("C")</td>
                 </tr>
             }
         </tbody>
     </table>
 }
-
+<BlazoredToasts />
 @code {
-    private List<Ocupacion> ocupaciones;
+    private List<Ocupacion>? ocupaciones;
+    private string salario = "0";
+    void Buscar()
+    {
+        Contexto context = new Contexto();
+        try
+        {
+            if (salario.Length == 0)
+                ocupaciones = context.ocupaciones!.ToList();
+
+            else{
+                var _salario = Convert.ToDecimal(salario);
+                var list = from o in ocupaciones where (o.Salario == _salario) select o;
+
+                if(list.Count() == 0)
+                {
+                    toastService.ShowInfo("No se encontraron ocupaciones con el salario de " + _salario.ToString());
+                    ocupaciones = context.ocupaciones!.ToList();
+                }
+                    
+                foreach (var o in list)
+                {
+                    ocupaciones = list.ToList();
+                }
+            }
+        }
+        catch (Exception exception)
+        {
+            toastService.ShowError("El salario tiene que ser número. Deje el campo vacío si quiere que la lista cargue todos los datos");
+        }
+    }
 
     protected override async Task OnInitializedAsync()
     {

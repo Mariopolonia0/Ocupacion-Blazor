@@ -1,7 +1,7 @@
 ﻿@page "/"
 @using Models
 @using Data
-
+@using Microsoft.EntityFrameworkCore;
 @inject IToastService toastService
 
 <PageTitle>Registro Ocupacion</PageTitle>
@@ -14,7 +14,7 @@
         <div class="card-header">
             <h4>Descripcion</h4>
             <input type="text" @bind=@ocupacion.Descripcion />
-            <button @onclick="Buscar"class="col align-self-start-center  btn btn-primary" >
+            <button @onclick="Buscar" class="col align-self-start-center  btn btn-primary">
                 <i class="oi oi-magnifying-glass" />
             </button>
         </div>
@@ -33,7 +33,7 @@
     Ocupacion ocupacion = new Ocupacion();
     Contexto contexto = new Contexto();
 
-    public void Guardar()
+    private void Guardar()
     {
         if (ocupacion.Descripcion.Length == 0)
         {
@@ -47,20 +47,27 @@
             return;
         }
 
-        
         contexto.ocupaciones?.Add(ocupacion);
         contexto.SaveChanges();
         ocupacion = new Ocupacion();
         toastService.ShowSuccess("Registro Guardado");
     }
-    public void Buscar()
+    private async Task Buscar()
     {
-        try{
-            ocupacion = contexto.ocupaciones.Where(o => o.Descripcion == ocupacion.Descripcion).Single();
-            toastService.ShowInfo("Encotrado");
-        }catch(Exception exe){
+        try
+        {
+            var _ocupacion = await contexto.ocupaciones!.FirstOrDefaultAsync(o => o.Descripcion == ocupacion.Descripcion);
+            if (_ocupacion == null)
+                toastService.ShowError("no se encotro");
+            else
+            {
+                toastService.ShowInfo("Encotrado");
+                ocupacion = _ocupacion;
+            }
+        }
+        catch (Exception exe)
+        {
             toastService.ShowError("no se encotro");
         }
-       
     }
 }

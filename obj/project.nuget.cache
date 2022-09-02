@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ULG3/9BVN41UAXyLMRJAxxdUJWZrxsDHC/RYdIEVyHFYkeTN/o4G0aBFZueMPpVvwAYRKz6GaNQ4tVV56xq6ww==",
+  "dgSpecHash": "dNQUUx23n3JtISAFJVZaZk6k0yO5fLQbWI4ZEnUOOR/Y9upK1zhLIAwTI2dcJgCof1vUdVof5SLo964d9mstTQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mario\\source\\projectoOcupacion\\projectoOcupacion.csproj",
+  "projectFilePath": "C:\\Users\\Mario\\source\\repos\\projectoOcupacion\\projectoOcupacion.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mario\\.nuget\\packages\\blazored.toast\\3.2.2\\blazored.toast.3.2.2.nupkg.sha512",
     "C:\\Users\\Mario\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

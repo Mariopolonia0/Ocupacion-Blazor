@@ -16,5 +16,6 @@ namespace projectoOcupacion.Models
             this.Descripcion = string.Empty;
             this.Salario = 00;
         }
+
     }
 }
