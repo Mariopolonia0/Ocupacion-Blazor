@@ -7,7 +7,7 @@
 
 * dotnet new blazorserver -f net6.0   **crear proyecto**
 
-* dotnet watch run  **compilar proyecto
+* dotnet watch run  **compilar proyecto**
 
 * dotnet publish -c Release -o ./bin/Publish  **publicar solución**
 
