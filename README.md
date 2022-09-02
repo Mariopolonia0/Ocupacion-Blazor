@@ -1,4 +1,7 @@
 # Pagina web de ocupacion en Blazor
+~~~
+link de pagina : http://registroocupacion.somee.com/
+~~~
 ~~~ 
 pagina de registro de ocupacion
 ~~~
