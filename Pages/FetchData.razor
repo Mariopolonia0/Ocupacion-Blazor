@@ -43,6 +43,12 @@ else
 @code {
     private List<Ocupacion>? ocupaciones;
     private string salario = "0";
+
+    protected override async Task OnInitializedAsync()
+    {
+        Contexto context = new Contexto();
+        ocupaciones = context.ocupaciones!.ToList();
+    }
     void Buscar()
     {
         Contexto context = new Contexto();
@@ -73,9 +79,5 @@ else
         }
     }
 
-    protected override async Task OnInitializedAsync()
-    {
-        Contexto context = new Contexto();
-        ocupaciones = context.ocupaciones.ToList();
-    }
+    
 }
