@@ -1,22 +1,33 @@
-# registro Ocupacion Blazor
+# Pagina web de ocupacion en Blazor
+~~~
+link de pagina : http://registroocupacion.somee.com/
+~~~
+~~~ 
+pagina de registro de ocupacion
+~~~
+![1](https://user-images.githubusercontent.com/65502311/188183398-7d97927e-873f-4533-9a72-280c37c152ef.PNG)
+~~~ 
+pagina de lista de ocupacion
+~~~
+![2](https://user-images.githubusercontent.com/65502311/188183555-df51e077-9af2-4632-b696-1c777c252834.PNG)
 
-COMANDO TERMINAR PARA VISUAL STUDIO CODE Y BLAZOR:
+## COMANDO PARA VISUAL STUDIO CODE Y BLAZOR:
 
-dotnet ef dbcontext list
+* dotnet ef dbcontext list
 
-dotnet new blazorserver -f net6.0  
+* dotnet new blazorserver -f net6.0   **crear proyecto**
 
--------------
-dotnet watch run = COMPILAR PROYECTO BLAZOR
+* dotnet watch run  **compilar proyecto**
 
--------------
-dotnet add package Microsoft.EntityFrameworkCore.tools 
+* dotnet publish -c Release -o ./bin/Publish  **publicar solución**
 
--------------
---PARA CONECTAR LA BASE DE DATOS
+* dotnet add package Microsoft.EntityFrameworkCore.tools  **agregar libreria Tools**
 
-dotnet tool install --global dotnet-ef 
 
-dotnet ef migrations add Inicial  
+## PARA CONECTAR LA BASE DE DATOS
 
-dotnet ef update-database    
+* dotnet tool install --global dotnet-ef 
+
+* dotnet ef migrations add Inicial  
+
+* dotnet ef update-database    
