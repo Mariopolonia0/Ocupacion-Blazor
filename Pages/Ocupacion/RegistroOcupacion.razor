@@ -1,0 +1,83 @@
+﻿@page "/Ocupacion/RegistroOcupacion"
+
+@using Models
+@using Data
+
+@inject IToastService toastService
+@inject NavigationManager NavManager
+
+<PageTitle>Registro Ocupacion</PageTitle>
+
+<EditForm Model="ocupacion">
+    <div class="card">
+        <div class="card-header">
+            <h3>Registro Ocupacion</h3>
+        </div>
+        <div class="card-header">
+            <h4>Descripcion</h4>
+            <input type="text" @bind=@ocupacion.Descripcion />
+            <button @onclick="Buscar" class="col align-self-start-center  btn btn-primary">
+                <i class="oi oi-magnifying-glass" />
+            </button>
+        </div>
+        <div class="card-header">
+            <h4>Salario</h4>
+            <input type="number" @bind-value=@ocupacion.Salario />
+        </div>
+        <div class="card-header">
+            <button class="btn btn-primary" @onclick="Nuevo">Nuevo</button>
+            <button class="btn btn-success" @onclick="Guardar">Guardar</button>
+            <button class="btn btn-danger" @onclick="Eliminar">Eliminar</button>
+        </div>
+    </div>
+    <BlazoredToasts />
+</EditForm>
+
+@code {
+    Ocupacion ocupacion = new Ocupacion();
+    Contexto contexto = new Contexto();
+
+    private async Task Guardar()
+    {
+        var guardado = await OcupacionBll.Guardar(ocupacion);
+        if (guardado)
+            toastService.ShowSuccess("Ocupacion guardada");
+        else
+            toastService.ShowError("Ocupacion no guardada");
+    }
+
+    private void Nuevo()
+    {
+        ocupacion = new Ocupacion();
+    }
+
+    private async Task Eliminar()
+    {
+        if (OcupacionBll.Existe(ocupacion.OcupacionId))
+        {
+            var eliminado = await OcupacionBll.Eliminar(ocupacion);
+            if (eliminado)
+            {
+                toastService.ShowSuccess("Se elimino la ocupacion");
+                Nuevo();
+            }
+
+            else
+                toastService.ShowSuccess("No se elimino la ocupacion");
+        }
+        else
+            toastService.ShowError("no se encotro");
+    }
+
+    private async Task Buscar()
+    {
+        var _ocupacion = await OcupacionBll.BuscarDescripcion(ocupacion.Descripcion);
+        if (_ocupacion == null)
+            toastService.ShowError("no se encotro");
+        else
+        {
+            toastService.ShowInfo("Encotrado");
+            ocupacion = _ocupacion;
+        }
+    }
+}

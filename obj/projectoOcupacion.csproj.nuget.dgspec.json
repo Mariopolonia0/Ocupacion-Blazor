@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mario\\source\\repos\\projectoOcupacion\\projectoOcupacion.csproj": {}
+    "C:\\Users\\Mario\\source\\repos\\Eregistro-Ocupacion-Blazor\\projectoOcupacion.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mario\\source\\repos\\projectoOcupacion\\projectoOcupacion.csproj": {
+    "C:\\Users\\Mario\\source\\repos\\Eregistro-Ocupacion-Blazor\\projectoOcupacion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mario\\source\\repos\\projectoOcupacion\\projectoOcupacion.csproj",
+        "projectUniqueName": "C:\\Users\\Mario\\source\\repos\\Eregistro-Ocupacion-Blazor\\projectoOcupacion.csproj",
         "projectName": "projectoOcupacion",
-        "projectPath": "C:\\Users\\Mario\\source\\repos\\projectoOcupacion\\projectoOcupacion.csproj",
+        "projectPath": "C:\\Users\\Mario\\source\\repos\\Eregistro-Ocupacion-Blazor\\projectoOcupacion.csproj",
         "packagesPath": "C:\\Users\\Mario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mario\\source\\repos\\projectoOcupacion\\obj\\",
+        "outputPath": "C:\\Users\\Mario\\source\\repos\\Eregistro-Ocupacion-Blazor\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Mario\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -74,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
