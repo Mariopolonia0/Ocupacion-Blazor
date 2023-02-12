@@ -1,14 +1,17 @@
-﻿@page "/fetchdata"
+﻿@page "/Ocupacion/ListaOcupacion"
 
 @using Data
 @using Models
 
 @inject IToastService toastService
+@inject NavigationManager NavManager
 
 <PageTitle>Lista Ocupaciones</PageTitle>
-<div class="card-header">
-    <input @bind="@salario" />
-    <button class="btn btn-primary" @onclick="Buscar">Buscar Salario</button>
+
+<div class="card-header bg-primary bg-opacity-50">
+    <input class="m-1" style="width: 5rem;" @bind="@salario" />
+    <button class="btn btn-primary m-1" @onclick="Buscar">Buscar Salario</button>
+    <button class="btn btn-primary m-1" @onclick="AgregarOcupacion">Agregar Ocupacion</button>
 </div>
 
 @if (ocupaciones == null)
@@ -17,7 +20,7 @@
 }
 else
 {
-    <table class="table">
+    <table class="table p-3 mb-2 table-sm bg-primary bg-opacity-50">
         <thead>
             <tr>
                 <th>Ocupacion Id</th>
@@ -32,13 +35,15 @@ else
                 <tr>
                     <td>@ocupacion.OcupacionId</td>
                     <td>@ocupacion.Descripcion</td>
-                    <td>@ocupacion.FechaRegistro.ToString("dddd dd / MM / yy")</td>
+                    <td>@ocupacion.FechaRegistro.ToString("dddd dd/MM/yy")</td>
                     <td>@ocupacion.Salario.ToString("C")</td>
                 </tr>
             }
         </tbody>
     </table>
 }
+
+
 <BlazoredToasts />
 @code {
     private List<Ocupacion>? ocupaciones;
@@ -49,6 +54,12 @@ else
         Contexto context = new Contexto();
         ocupaciones = context.ocupaciones!.ToList();
     }
+
+    void AgregarOcupacion()
+    {
+        NavManager.NavigateTo("/Ocupacion/RegistroOcupacion");
+    }
+
     void Buscar()
     {
         Contexto context = new Contexto();
@@ -57,16 +68,17 @@ else
             if (salario.Length == 0)
                 ocupaciones = context.ocupaciones!.ToList();
 
-            else{
+            else
+            {
                 var _salario = Convert.ToDecimal(salario);
                 var list = from o in ocupaciones where (o.Salario == _salario) select o;
 
-                if(list.Count() == 0)
+                if (list.Count() == 0)
                 {
                     toastService.ShowInfo("No se encontraron ocupaciones con el salario de " + _salario.ToString());
                     ocupaciones = context.ocupaciones!.ToList();
                 }
-                    
+
                 foreach (var o in list)
                 {
                     ocupaciones = list.ToList();
@@ -78,6 +90,4 @@ else
             toastService.ShowError("El salario tiene que ser número. Deje el campo vacío si quiere que la lista cargue todos los datos");
         }
     }
-
-    
 }
